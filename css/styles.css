@@ -1,0 +1,131 @@
+:root{ /*variables de color*/
+    --primary-color:hsl(214, 84%, 50%);
+    --text-color:hsl(0, 0%, 31%);
+    --bg-color: hsl(0, 0%, 90%);
+    --bg-card-color:hsl(0, 0%, 98%);
+    --transition: color 0.1s, background-color 0.2s ease-in-out;
+    --border-radius:brder-radius: .4em;
+}
+
+
+/* el * indica que a todos los elementos le daremos estas propiedades*/
+
+*{
+    box-sizing: border-box;
+
+}
+
+a{
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+/*establezco colores del body con los colores q estableci y eleji arriba como root*/
+body {
+    margin: 0;
+    background-color: var(--bg-color) ;
+    color: var(--text-color);
+    transition: var(--transition);
+}
+
+/*cuando el body tenga la variable dark*/
+body.dark {
+--text-color:hsl(0, 0%, 83%);
+--bg-color:hsl(0, 0%, 15%); 
+--bg-card-color:hsl(0, 0%, 20%);
+
+}
+
+/*posicionamos el header con la lunita y damos tamaño*/
+.header{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    height: 75px;
+    padding-bottom: 0 1.5em;
+    background-color: var(--bg-card-color);
+    transition: var(--transition);
+}
+
+.switches {
+display: flex;
+align-items:center;
+justify-content: space-between;
+
+}
+
+.toggle-theme {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.toggle-theme__icon {
+    margin-right: 0.5em;
+    width: 20px;
+}
+
+.toggle-theme__text {
+    font-size: 0.8rem;
+}
+
+/*le damos estilo al contenedor de colores*/
+
+.colors {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20px;
+    width: 100px;
+}
+ /*cuadraditos de colores*/
+.colors_item {
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--text-color);
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.colors_item--blue
+{
+    --primary-color:hsl(214, 84%, 50%);
+}
+
+.colors_item--green
+{
+    --primary-color:hsl(130, 82%, 53%);
+}
+
+.colors_item--purple
+{
+    --primary-color:hsl(278, 45%, 41%);
+}
+
+.colors_item--orange
+{
+    --primary-color:hsl(46, 95%, 50%);
+}
+
+.title {
+    text-align: center;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+/*ajustamos imagen para celular*/
+.main
+{
+    display: grid;
+}
+
+/*achicamos la columna de la derecha con la imagen*/
+@media screen and (min-width:720px) {
+    .main{
+        grid-template-columns: min-content 1fr;
+    }
+}

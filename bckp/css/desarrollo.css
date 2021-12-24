@@ -1,0 +1,19 @@
+#desarrollo h3{
+    text-align: center;
+    font-size: 200%;
+}
+
+#desarrollo .contenedor {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#desarollo article{
+    margin: 15px;
+}
+
+#desarrollo img{
+    width: 100%;
+    max-width: 280px;
+}
