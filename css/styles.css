@@ -4,7 +4,7 @@
     --bg-color: hsl(0, 0%, 90%);
     --bg-card-color:hsl(0, 0%, 98%);
     --transition: color 0.1s, background-color 0.2s ease-in-out;
-    --border-radius:brder-radius: .4em;
+    --border-radius: 0.4em;
 }
 
 
@@ -18,10 +18,15 @@
 a{
     color: var(--primary-color);
     text-decoration: none;
+    font-style: italic;
+}
+p{
+    text-align: justify;
 }
 
 img{
     max-width: 100%;
+    display: block;
 }
 
 /*establezco colores del body con los colores q estableci y eleji arriba como root*/
@@ -120,6 +125,7 @@ justify-content: space-between;
 /*ajustamos imagen para celular*/
 .main
 {
+    padding: 2em;
     display: grid;
 }
 
@@ -128,4 +134,56 @@ justify-content: space-between;
     .main{
         grid-template-columns: min-content 1fr;
     }
+}
+
+
+
+.card{
+    padding: 1em;
+    background-color: var(--bg-card-color);
+    border-radius: var(--border-radius);
+    
+}
+
+
+.card__image-container{
+    min-width: 220px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.card-a{
+    padding: 1em;
+    background-color: var(--bg-card-color);
+    border-radius: var(--border-radius);
+}
+/*la section de ariel*/
+.column-a{
+    padding: 1em;
+    margin-left: 1cm;
+    margin-right: 20cm;
+}
+/*la section de facu*/
+.column-f{
+    padding: 1em;
+    margin-left: 1cm;
+    margin-right: 20cm;
+}
+
+/*la section de gonza*/
+.column-g{
+    padding: 1em;
+    
+    ;
+}
+
+.card-g{
+    padding: 1em;
+    background-color: var(--bg-card-color);
+    border-radius: var(--border-radius);
+}
+.card-f{
+    padding: 1em;
+    background-color: var(--bg-card-color);
+    border-radius: var(--border-radius);
 }
